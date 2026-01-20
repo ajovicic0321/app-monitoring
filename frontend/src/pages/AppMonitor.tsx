@@ -129,12 +129,12 @@ export default function AppMonitor() {
                                 <p className="text-sm font-medium">{formatDate(screenshot.takenAt)}</p>
                             </div>
                             <a
-                                href={`/screenshots/${screenshot.fileName}`}
+                                href={`${import.meta.env.VITE_API_BASE_URL}/screenshots/${screenshot.fileName}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src={`/screenshots/${screenshot.fileName}`}
+                                    src={`${import.meta.env.VITE_API_BASE_URL}/screenshots/${screenshot.fileName}`}
                                     alt={`Screenshot from ${formatDate(screenshot.takenAt)}`}
                                     className="w-full h-auto"
                                 />
